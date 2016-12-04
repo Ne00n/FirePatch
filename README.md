@@ -2,6 +2,13 @@
 
 This is a simple Bootstrap Based Panel, to Update your Debian/Ubuntu Servers on the Go without SSH access
 
+![alt tag](http://i.imgur.com/NB5XBSB.png)
+
+FirePatch is licensed under a
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+You should have received a copy of the license along with this
+work. If not, see https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 Webserver Requirements:
 
 - PHP 7.0+

@@ -2,6 +2,11 @@
 
 This is a simple Bootstrap Based Panel, to Update your Debian/Ubuntu Servers on the Go without SSH access
 
+Webserver Requirements:
+
+- PHP 7.0+
+- MySQL or MariaDB
+
 Todo:
 
 - Give Feedback if Updates need to be installed

@@ -2,7 +2,11 @@
 
 This is a simple Bootstrap Based Panel, to Update your Debian/Ubuntu Servers on the Go without SSH access
 
-![alt tag](http://i.imgur.com/NB5XBSB.png)
+![alt tag](http://i.imgur.com/hqJkXLf.png)
+
+![alt tag](http://i.imgur.com/YEg46EI.png)
+
+![alt tag](http://i.imgur.com/7yEDgrh.png)
 
 FirePatch is licensed under a
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.

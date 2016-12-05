@@ -1,5 +1,10 @@
-<?php include 'header.php'; ?>
+<?php
+include 'header.php';
+include 'navbar.php';
+?>
+
 <div class="container starter-template">
+  
 <?php
 
 if ($page == 'add') {

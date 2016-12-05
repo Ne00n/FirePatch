@@ -33,12 +33,12 @@ class Server {
 
    $data = array();
 
-   $query = "SELECT ID,Name,Lastrun,Update_Running FROM Servers ORDER by ID ASC";
+   $query = "SELECT ID,Name,Lastrun,Lastupdate,Update_Running FROM Servers ORDER by ID ASC";
    $stmt = $this->DB->GetConnection()->prepare($query);
    $stmt->execute();
    $result = $stmt->get_result();
    while ($row = $result->fetch_assoc()) {
-     $data[$row['ID']] = array("Name" => $row['Name'],"Lastrun" => $row['Lastrun'],"Update_Running" => $row['Update_Running']);
+     $data[$row['ID']] = array("Name" => $row['Name'],"Lastrun" => $row['Lastrun'],"Lastupdate" => $row['Lastupdate'],"Update_Running" => $row['Update_Running']);
    }
 
    return $data;

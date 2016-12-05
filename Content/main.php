@@ -86,6 +86,7 @@ if ($page == 'add') {
           <tr>
             <th>Server</th>
             <th>Lastrun</th>
+            <th>Lastupdate</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -99,7 +100,16 @@ if ($page == 'add') {
           foreach ($data as $key => $element) {
 
             echo '<td class="text-left">'.Page::escape($element['Name']).'</td>';
-            echo '<td class="text-left">'.Page::escape(date("d.m.Y H:i:s",$element['Lastrun'])).'</td>';
+            if ($element['Lastrun'] == 0) {
+              echo '<td class="text-left">Never</td>';
+            } else {
+              echo '<td class="text-left">'.Page::escape(date("d.m.Y H:i:s",$element['Lastrun'])).'</td>';
+            }
+            if ($element['Lastupdate'] == 0) {
+              echo '<td class="text-left">Never</td>';
+            } else {
+              echo '<td class="text-left">'.Page::escape(date("d.m.Y H:i:s",$element['Lastupdate'])).'</td>';
+            }
             if ($element['Update_Running']) {
               echo '<td class="text-left"><a href=""><button class="btn btn-warning btn-xs" type="button" disabled><i class="fa fa-spinner fa-spin"></i></button></a>';
             } else {

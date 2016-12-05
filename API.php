@@ -16,10 +16,11 @@ if(!preg_match("/^[a-zA-Z0-9]+$/",$_POST["TOKEN"])){ die("Token contains invalid
 
 if (isset($_POST["JOB_DONE"]) && $_POST["JOB_DONE"] == 1) {
 
-  $Update = 0;
+  $update = 0;
+  $lastupdate = time();
 
-  $stmt = $DB->GetConnection()->prepare("UPDATE Servers SET Update_Running = ? WHERE Token = ?");
-  $stmt->bind_param('is', $Update,$_POST["TOKEN"]);
+  $stmt = $DB->GetConnection()->prepare("UPDATE Servers SET Update_Running = ?, Lastupdate = ? WHERE Token = ?");
+  $stmt->bind_param('iis', $Update,$lastupdate,$_POST["TOKEN"]);
   $rc = $stmt->execute();
   if ( false===$rc ) { die("MySQL Error"); }
   $stmt->close();

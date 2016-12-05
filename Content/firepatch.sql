@@ -6,6 +6,7 @@ CREATE TABLE `Servers` (
   `Name` varchar(50) NOT NULL,
   `Token` varchar(50) NOT NULL,
   `Lastrun` int(11) NOT NULL DEFAULT '0',
+  `Lastupdate` int(11) NOT NULL DEFAULT '0',
   `Update_Running` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

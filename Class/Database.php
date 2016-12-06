@@ -2,16 +2,18 @@
 
 class Database {
 
+  private $Database;
+
   public function InitDB() {
-      $this->database = new mysqli(_db_host, _db_user, _db_password, _db_database);
-      if ($this->database->connect_error) {
-         echo "Not connected, error: " .   $this->database->connect_error;
+      $this->Database = new mysqli(_db_host, _db_user, _db_password, _db_database);
+      if ($this->Database->connect_error) {
+         echo "Not connected, error: " .   $this->Database->connect_error;
          exit;
       }
   }
 
   public function GetConnection() {
-      return $this->database;
+      return $this->Database;
   }
 
 }

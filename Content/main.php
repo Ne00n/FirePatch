@@ -4,7 +4,7 @@ include 'navbar.php';
 ?>
 
 <div class="container starter-template">
-  
+
 <?php
 
 if ($page == 'add') {
@@ -104,22 +104,11 @@ if ($page == 'add') {
 
           foreach ($data as $key => $element) {
 
+            echo '<tr class="'.($element['Update_Error'] ? " warning" : "").'">';
             echo '<td class="text-left">'.Page::escape($element['Name']).'</td>';
-            if ($element['Lastrun'] == 0) {
-              echo '<td class="text-left">Never</td>';
-            } else {
-              echo '<td class="text-left">'.Page::escape(date("d.m.Y H:i:s",$element['Lastrun'])).'</td>';
-            }
-            if ($element['Lastupdate'] == 0) {
-              echo '<td class="text-left">Never</td>';
-            } else {
-              echo '<td class="text-left">'.Page::escape(date("d.m.Y H:i:s",$element['Lastupdate'])).'</td>';
-            }
-            if ($element['Update_Running']) {
-              echo '<td class="text-left"><a href=""><button class="btn btn-warning btn-xs" type="button" disabled><i class="fa fa-spinner fa-spin"></i></button></a>';
-            } else {
-              echo '<td class="text-left"><a href="index.php?server=update?'.Page::escape($key).'"><button class="btn btn-warning btn-xs" type="button"><i class="fa fa-cloud-upload"></i></button></a>';
-            }
+            echo '<td class="text-left">'.($element['Lastrun'] == 0 ? "Never" : Page::escape(date("d.m.Y H:i:s",$element['Lastrun']))).'</td>';
+            echo '<td class="text-left">'.($element['Lastupdate'] == 0 ? "Never" : Page::escape(date("d.m.Y H:i:s",$element['Lastupdate']))).'</td>';
+            echo '<td class="text-left">'.($element['Update_Running'] ? '<a href=""><button class="btn btn-warning btn-xs" type="button" disabled><i class="fa fa-spinner fa-spin"></i></button></a>' : '<a href="index.php?server=update?'.Page::escape($key).'"><button class="btn btn-warning btn-xs" type="button"><i class="fa fa-cloud-upload"></i></button></a>');
             echo '<a href="index.php?server=remove?'.Page::escape($key).'"><button class="btn btn-danger btn-xs" type="button"><i class="fa fa-remove"></i></button></a></td>';
             echo '</tr>';
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 0.1
+# Version 0.3
 
 mkdir /home/firepatch
 cd /home/firepatch
@@ -13,7 +13,7 @@ chmod -R 700 /home/firepatch/
 #Make sure that only Root can change the file and not the User itself
 chown root:root /home/firepatch/Update.sh
 chmod 755 /home/firepatch/Update.sh
-crontab -u firepatch -l 2>/dev/null | { cat; echo "*/1 * * * *  /home/firepatch/FirePatch.sh > /dev/null 2>&1"; } | crontab -u firepatch -
+crontab -u firepatch -l 2>/dev/null | { cat; echo "*/2 * * * *  /home/firepatch/FirePatch.sh > /dev/null 2>&1"; } | crontab -u firepatch -
 cd
 
 #Install dependencies

@@ -1,3 +1,3 @@
 #!/bin/bash
-# Version 0.1
-apt-get update && apt-get -y upgrade
+# Version 0.2
+apt-get update && apt-get -y -o Dpkg::Options::="--force-confold" upgrade

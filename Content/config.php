@@ -9,4 +9,7 @@ define("_db_database", "firepatch");
 //Page
 define('_script_path','https://yourdomain.com/Script/');
 
+//Timezone
+date_default_timezone_set('Europe/Amsterdam');
+
  ?>

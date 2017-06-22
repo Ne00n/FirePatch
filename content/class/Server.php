@@ -13,7 +13,7 @@ class Server {
 
   public function addServer($name) {
 
-    if(!preg_match("/^[a-zA-Z0-9._\-]+$/",$name)){ $this->error = "The name of the Server contains invalid letters.";}
+    if(!preg_match("/^[a-zA-Z0-9._\-, ]+$/",$name)){ $this->error = "The name of the Server contains invalid letters.";}
 
     if ($this->error == "") {
 

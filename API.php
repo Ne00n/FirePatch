@@ -37,12 +37,12 @@ if (isset($_POST["JOB_DONE"]) && $_POST["JOB_DONE"] == 1) {
   if (isset($results['0']['Update_Running']) && $results['0']['Update_Running'] == 1) {
     echo 'Update';
   #Token vaild, no Updated needed, but we need to update Lastrun
-  } elseif (isset($db_Server_Running) && $db_Server_Running == 0) {
+  } elseif (isset($results['0']['Update_Running']) && $results['0']['Update_Running'] == 0) {
 
     $Lake->UPDATE('Servers')->SET(array('Lastrun' => time()))->WHERE(array('Token' => $_POST["TOKEN"]))->VAR('is')->DONE();
     if ($Lake->getSuccess() === false) { die("MySQL Error"); }
     echo 'ok';
-    
+
   } else {
     die("Invalid Token!");
   }

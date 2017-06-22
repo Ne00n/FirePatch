@@ -30,8 +30,10 @@ Quick Setup:
 
 - Create a Database + User
 - Import the SQL file from /content/sql/firepatch.sql into your Database
+- Rename content/config.sample.php to config.php
 - Update content/config.php with your Database details, also Update the Script Path
-- Replace yourpage.com in content/scripts/FirePatch.sh and content/scripts/install.sh with your Domain
+- Rename content/scripts/Install.sample.sh to Install.sh and FirePatch.sample.sh to FirePatch.sh
+- Replace yourpage.com in content/scripts/FirePatch.sh and content/scripts/Install.sh with your Domain
 - Please make sure that you add a .htaccess to limit the Access, since this Software dosent offer a login yet but soonTM
 - Make also sure that you are using SSL, otherwise the Token would be not transmitted encrypted
 - If you go to https://yourdomain.com you should be able to Update your Servers on the Go! (obviously yourdomain.com is an example)

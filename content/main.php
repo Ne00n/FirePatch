@@ -14,7 +14,7 @@ if ($page == 'add') {
     $Server = new Server($DB);
     $Server->addServer($_POST['name']);
     if ($Server->getError() == "") {
-      echo '<div class="alert alert-success" role="alert"><center>Success, you need to run this Command on your Debian Server to Deploy the Agent:<pre>wget '._script_path.'install.sh && bash install.sh '. $Server->getToken().'</pre></center></div>';
+      echo '<div class="alert alert-success" role="alert"><center>Success, you need to run this Command on your Debian Server to Deploy the Agent:<pre>wget '._script_path.'Install.sh && bash Install.sh '. $Server->getToken().'</pre></center></div>';
     } else {
       echo '<div class="alert alert-danger" role="alert"><center>'.$Server->getError().'</center></div>';
     }

@@ -17,8 +17,7 @@ crontab -u firepatch -l 2>/dev/null | { cat; echo "*/5 * * * *  /home/firepatch/
 cd
 
 #Install dependencies
-apt-get -y install curl
-apt-get -y install sudo
+apt-get -y install curl sudo
 #Configure sudo for Update.sh
 echo "firepatch ALL=(root) NOPASSWD: /home/firepatch/Update.sh" >> /etc/sudoers
 #Finished

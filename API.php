@@ -1,9 +1,9 @@
 <?php
 
-include 'Content/config.php';
+include 'content/config.php';
 
 function loader($class) {
-    include 'Class/' . $class . '.php';
+    include 'content/class/' . $class . '.php';
 }
 
 spl_autoload_register('loader');

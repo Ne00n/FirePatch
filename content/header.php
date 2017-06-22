@@ -12,11 +12,11 @@
     <title>FirePatch</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="Content/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Content/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="content/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="Content/css/starter-template.css" rel="stylesheet">
+    <link href="content/css/starter-template.css" rel="stylesheet">
 
   </head>
 

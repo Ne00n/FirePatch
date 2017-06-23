@@ -21,4 +21,4 @@ apt-get -y install curl sudo
 #Configure sudo for Update.sh
 echo "firepatch ALL=(root) NOPASSWD: /home/firepatch/Update.sh" >> /etc/sudoers
 #Finished
-rm install.sh
+rm Install.sh
